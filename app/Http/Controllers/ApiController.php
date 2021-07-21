@@ -13,7 +13,7 @@ class ApiController extends Controller
     $response = $client->get('https://apisnet.col.gob.mx/wsSignGob/apiV1/Status');
     $status = $response->getBody()->getContents();
     $json = json_decode($status, true);
-    dd($json['RESTService']);
+    dd($json);
 
         return view('welcome');
     }    
